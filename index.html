@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyBl Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="container header-content">
+        <a href="#" class="logo">SkyBl Restaurant</a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#offer">Offer</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+          <h1 class="fade-in">Experience Culinary Excellence</h1>
+          <p class="fade-in delay-1">SkyBl Restaurant - Where Tradition Meets Taste</p>
+          <a href="#menu" class="btn btn-primary fade-in delay-2">View Menu</a>
+        </div>
+      </section>
+
+      <section id="offer" class="section offer-section">
+        <div class="container">
+          <h2 class="section-title">Offer of the Day</h2>
+          <div class="offer-card fade-in-up">
+            <div class="offer-image">
+              <!-- Image will be injected here -->
+              <img src="offer.jpg" alt="Special Offer" id="offer-img">
+            </div>
+            <div class="offer-details">
+              <h3>Chef's Special Platter</h3>
+              <p>Enjoy our signature mixed grill platter with a complimentary dessert.</p>
+              <div class="price-tag">
+                <span class="original-price">$45.00</span>
+                <span class="discounted-price">$29.99</span>
+              </div>
+              <a href="#contact" class="btn btn-secondary">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" class="section menu-section">
+        <div class="container">
+          <h2 class="section-title">Our Menu</h2>
+          <div class="menu-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="starters">Starters</button>
+            <button class="category-btn" data-category="mains">Mains</button>
+            <button class="category-btn" data-category="desserts">Desserts</button>
+          </div>
+          <div class="menu-grid" id="menu-grid">
+            <!-- Menu items will be populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-section">
+        <div class="container">
+          <h2 class="section-title">Cakes & Pastries</h2>
+          <div class="gallery-grid">
+            <!-- Gallery images will be populated by JS/HTML -->
+            <div class="gallery-item fade-in-up"><img src="cake1.jpg" alt="Chocolate Truffle Cake"></div>
+            <div class="gallery-item fade-in-up delay-1"><img src="pastry1.jpg" alt="Fruit Tart"></div>
+            <div class="gallery-item fade-in-up delay-2"><img src="cake2.jpg" alt="Red Velvet Cake"></div>
+            <div class="gallery-item fade-in-up"><img src="pastry2.jpg" alt="Croissant"></div>
+            <div class="gallery-item fade-in-up delay-1"><img src="cake3.jpg" alt="Cheesecake"></div>
+            <div class="gallery-item fade-in-up delay-2"><img src="pastry3.jpg" alt="Macarons"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <h2 class="section-title">Contact & Order</h2>
+          <div class="contact-wrapper">
+            <div class="contact-info fade-in-left">
+              <h3>Visit Us</h3>
+              <p>123 Culinary Avenue, Food District</p>
+              <p>Phone: +92 3089879689</p>
+              <p>Email: saimshb786@gmail.com</p>
+              <div class="hours">
+                <h4>Opening Hours</h4>
+                <p>Mon-Sun: 10:00 AM - 11:00 PM</p>
+              </div>
+            </div>
+            <form class="order-form fade-in-right" id="orderForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" required>
+              </div>
+              <div class="form-group">
+                <label for="order">Your Order</label>
+                <textarea id="order" rows="4" required
+                  placeholder="Please list the items you'd like to order..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 SkyBl Restaurant. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
